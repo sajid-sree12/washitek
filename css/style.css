@@ -58,3 +58,8 @@ body{
 .button-bg{
     background: #006666;
 }
+
+.nav-item:hover{
+    font-weight: bold;
+    color: #006666;
+}
