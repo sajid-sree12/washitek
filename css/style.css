@@ -51,3 +51,10 @@ body{
     border-right: 0px;
     background: linear-gradient(rgba(255, 255, 255, 0.205),rgba(255, 255, 255, 0));
 }
+.font-clr{
+    color: #006666;
+
+}
+.button-bg{
+    background: #006666;
+}
