@@ -63,3 +63,10 @@ body{
     font-weight: bold;
     color: #006666;
 }
+@media(max-width:576px){
+    .outer-container{
+        display:flex;
+        justify-content:center;
+        align-items-center:center;
+    }
+}
