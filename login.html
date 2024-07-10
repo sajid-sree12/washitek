@@ -16,8 +16,19 @@
 <body>
     <div class="" style="background-color: transparent;">
         <div class="row p-0 m-0" style="background-color: transparent;">
-            <div class="col-lg-1 logo-bg bg-transparent">
+            <div class="col-6 col-lg-1 logo-bg bg-transparent">
                 <a href="index.html"><img src="assets/logo_w.png" class="pt-0 mt-0" height="100" alt=""></a>
+            </div>
+            <div class="col-6 d-block d-lg-none col-lg-0 px-1 py-4">
+                <div class="d-flex justify-content-center">
+                    <div>
+                        <a href="login.html" class="btn text-white btn-bg mx-2 rounded-pill "
+                            style="background: #006666;">Login</a>
+                    </div>
+                    <div>
+                        <a href="signup.html" class="btn btn-light mx-2 rounded-pill">Sign up</a>
+                    </div>
+                </div>
             </div>
             <div class="col-lg-4 px-3 bg-black py-2 menu-bar bg-white navbar">
                 <div class="d-flex justify-content-center w-100">
@@ -30,6 +41,13 @@
                     </div>
                 </div>
             </div>
+            <div class="d-none d-lg-block col-lg-7 px-1 py-4">
+                <div class="d-flex justify-content-center">
+                    <a href="login.html" class="btn btn-light text-white btn-bg px-5 mx-2 rounded-pill "
+                        style="background: #006666;">Login</a>
+                    <a href="signup.html" class="btn btn-light px-5 mx-2 rounded-pill">Sign up</a>
+                </div>
+            </div>
         </div>
         <div class="col-lg-7"></div>
         <div class="container mt-5 col-lg-4 bg-white p-4 rounded border-0">
@@ -38,33 +56,62 @@
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label fw-bold">Username</label> <br>
                     <div class="d-flex" style="border: 1px solid rgba(0, 0, 0, 0.267);border-radius: 5px;">
-                    <input type="email" class="form-control border-0 bg-transparent" style="border-width: 2px;" id="exampleInputEmail1"
-                        placeholder="Email/Phone no" aria-describedby="emailHelp">
+                        <input type="email" class="form-control border-0 bg-transparent" style="border-width: 2px;"
+                            id="exampleInputEmail1" placeholder="Email/Phone no" aria-describedby="emailHelp">
                     </div>
                     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label fw-bold">Password</label>
                     <div class="d-flex" style="border: 1px solid rgba(0, 0, 0, 0.267);border-radius: 5px;">
-                        <input type="password" class="form-control border-0 bg-transparent" style="border-width: 2px;" id="exampleInputPassword1">
-                        <button class="btn border-0" type="button"><i class="fa-solid fa-eye fa-lg" style="color: #000000;"></i></button>
+                        <input type="password" class="form-control border-0 bg-transparent" style="border-width: 2px;"
+                            id="password">
+                        <button class="btn border-0" id="togglePassword" type="button"><i class="fa-solid fa-eye"
+                                style="color: #000000;"></i></button>
                     </div>
                 </div>
                 <div class="mb-3">
-                    <a href="#" class="text-decoration-none">
-                        <p class="form-check-label fw-bold font-clr" for="exampleCheck1 ">Forgot Password?</p>
-                    </a>
+                    <!-- Button trigger modal -->
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn border-0 text-success fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Forgot password ?
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                          <label for="user-mail" class="col-form-label fw-bold">Enter your Email</label>
+                                          <input type="text" class="form-control border-3" id="recipient-name">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer d-flex justify-content-center">
+                                    <button type="button" class="btn button-bg text-white fw-bold" style="background: #006666;" data-bs-dismiss="modal">Send</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <button type="submit" class="btn button-bg w-100 text-white fw-bold"
                     style="background: #006666;">Login</button>
             </form>
         </div>
-        <div class="container-fluid bg-footer pt-4">
+        <div class="container-fluid container-height"></div>
+        <div class="container-fluid bg-footer pt-6">
             <div class="row">
                 <div class="col-lg-4 d-flex justify-content-center mb-1">
                     <div class="">
                         <div class="d-flex justify-content-center">
-                            <img src="assets/logo.png" height="100" alt="" srcset="">
+                            <img src="assets/logo_w.png" height="100" alt="" srcset="">
                         </div>
                         <p class="text-white">Make the mess, we clean the stress</p>
                         <div class="d-flex justify-content-center mb-2">
@@ -105,13 +152,22 @@
                     </div>
                     <div class="col-lg-6 d-flex justify-content-center justify-content-lg-start text-light">
                         <div class="text-start">
-                        <h5 class="fw-bold text-center">Services</h5>
-                        <p>Free pick up <i class="fa-solid fa-truck-pickup fa-lg px-2" style="color: #ffffff;"></i>
-                        </p>
-                        <p>Wash and Dry<i class="fa-solid fa-hands-bubbles fa-lg px-2" style="color: #ffffff;"></i>
-                        </p>
-                        <p>Fold and iron <i class="fa-solid fa-shirt fa-lg" style="color: #ffffff;"></i></p>
-                        <p>Free delivery <i class="fa-solid fa-truck fa-lg" style="color: #ffffff;"></i></p>
+                            <h5 class="fw-bold text-lg-start text-center">Services</h5>
+                            <div class="d-flex justify-content-between">Free pick up img<img
+                                    src="assets/free_pick_up.png" class="icon-container-img"
+                                    style="width: 32px; height: 32px;" alt=""></div>
+                            <div class="d-flex justify-content-between">
+                                <span>Wash and dry</span><img src="assets/wash_and_dry.png" class="icon-container-img"
+                                    style="width: 32px; height: 32px;" alt="">
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span>Fold and iron</span><img src="assets/fold_and_iron.png" class="icon-container-img"
+                                    style="width: 32px; height: 32px;" alt="">
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span>Free delivery</span><img src="assets/free_delivery.png" class="icon-container-img"
+                                    style="width: 32px; height: 32px;" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -130,6 +186,25 @@
 
         window.addEventListener('resize', adjustLogoBackground);
         window.addEventListener('load', adjustLogoBackground);
+
+        let passwordField = document.getElementById('password');
+        let togglePassword = document.getElementById('togglePassword');
+
+        togglePassword.addEventListener('click', function () {
+            // Toggle the type attribute
+            let type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordField.setAttribute('type', type);
+
+            let icon = this.querySelector('i');
+            if (type === 'password') {
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            } else {
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            }
+        });
+
     </script>
 </body>
 <script src="https://kit.fontawesome.com/dedeab9b5a.js" crossorigin="anonymous"></script>

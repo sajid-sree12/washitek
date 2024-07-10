@@ -70,3 +70,11 @@ body{
         align-items-center:center;
     }
 }
+
+.icon-container-img{
+    filter: invert(100%);
+}
+
+.container-height{
+    height: 10rem;
+}
