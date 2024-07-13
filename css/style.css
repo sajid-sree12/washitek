@@ -1,5 +1,9 @@
+.n-active{
+    font-weight: bold;
+    color: #006666;
+}
 .txt-clr{
-    color: black;
+    color: #006666;
 }
 
 .menu-bar{
@@ -78,3 +82,4 @@ body{
 .container-height{
     height: 10rem;
 }
+
