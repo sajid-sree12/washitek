@@ -1,6 +1,10 @@
 .n-active{
     font-weight: bold;
     color: #006666;
+    border: 2px solid #006666;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
 }
 .txt-clr{
     color: #006666;
@@ -21,6 +25,7 @@
 }
 body{
     background: url("../assets/background.png");
+        
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -81,5 +86,9 @@ body{
 
 .container-height{
     height: 10rem;
+}
+
+.txt-color1{
+    color:#ccffff;
 }
 
