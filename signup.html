@@ -11,50 +11,50 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
-    <style>
-        body{
-            background: url("../assets/background.png");
-            background-position: top center;
-            background-repeat: no-repeat;
-            background-size:contain
-        }
-    </style>
 </head>
 
 <body>
     <div class="" style="background-color: transparent;">
-        <div class="row p-0 m-0" style="background-color: transparent;">
-            <div class=" col-6 col-lg-1 logo-bg bg-transparent">
-                <a href="index.html"><img src="assets/logo_w.png" class="pt-0 mt-0" height="100" alt=""></a>
-            </div>
-            <div class="col-6 d-block d-lg-none col-lg-0 px-1 py-4">
-                <div class="d-flex justify-content-center">
-                    <div>
-                        <a href="login.html" class="btn text-white btn-bg mx-2 rounded-pill "
-                            style="background: #006666;">Login</a>
+        <div class="row m-0">
+            <div class="col-lg-9">
+                <div class="row m-0" style="background-color: transparent;">
+                    <div class="col-3 col-lg-1 logo-bg bg-transparent me-5">
+                        <a href="index.html"><img src="assets/logo_w.png" height="100" alt=""></a>
                     </div>
-                    <div>
-                        <a href="signup.html" class="btn btn-light mx-2 rounded-pill">Sign up</a>
+                    <div class="col-7 d-block d-lg-none col-lg-0 px-1 py-4">
+                        <div class="d-flex justify-content-center">
+                            <div>
+                                <a href="login.html" class="btn text-white btn-bg mx-2 rounded-pill "
+                                    style="background: #006666;">Login</a>
+                            </div>
+                            <div>
+                                <a href="signup.html" class="btn btn-light mx-2 rounded-pill">Sign up</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-4 px-3 bg-black py-2 menu-bar bg-white navbar">
-                <div class="d-flex justify-content-center w-100">
-                    <div class="d-flex justify-content-between">
-                        <a href="index.html" class="btn btn-light bg-transparent border-0 txt-clr txt ">Home</a>
-                        <a href="about.html" class="btn btn-light bg-transparent border-0 txt-clr txt">About</a href="">
-                        <a href="" class="btn btn-light bg-transparent border-0 txt-clr txt">Services</a href="">
-                        <a href="" class="btn btn-light bg-transparent border-0 txt-clr txt">Pricing</a href="">
-                        <a href="" class="btn btn-light bg-transparent border-0 txt-clr txt">Contact</a href="">
+                    <div class="col-lg-5 px-1 py-2 menu-bar bg-white ">
+                        <div class="d-flex justify-content-center">
+                            <a href="index.html"
+                                class="a bg-transparent px-2 text-decoration-none py-2 nav-item txt-clr n-active">Home</a>
+                            <a href="about.html"
+                                class="a bg-transparent px-2 text-decoration-none py-2 nav-item txt-clr">About</a>
+                            <a href="service.html"
+                                class="a bg-transparent px-2 text-decoration-none py-2 nav-item txt-clr">Services</a>
+                            <a href="pricing.html" class="a bg-transparent px-2 text-decoration-none py-2 nav-item txt-clr">Pricing</a>
+                            <a href="contact.html" class="a bg-transparent px-2 text-decoration-none py-2 nav-item txt-clr">Contact</a>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="d-none d-lg-block col-lg-7 px-1 py-4">
-                <div class="d-flex justify-content-center">
-                    <a href="login.html" class="btn btn-light text-dark btn-bg px-5 mx-2 rounded-pill "
-                        style="background: #ffffff;">Login</a>
-                    <a href="signup.html" class="btn btn-dark px-5 mx-2 rounded-pill" style="background: #006666;">Sign up</a>
+                    <div class="col-lg-1"></div>
+                    <div class="d-none d-lg-block col-lg-4 px-1 py-4">
+                        <div class="d-flex justify-content-center">
+                            <a href="login.html" class="btn btn-light text-dark  px-4 mx-2 rounded-pill "
+                                style="background: #ffffff;">Login</a>
+                            <div>
+                                <a href="signup.html" class="btn px-4 rounded-pill text-white"
+                                    style="background: #006666;">Sign up</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -121,18 +121,24 @@
 
                     </div>
                     <div class="mb-3">
-                        <div>
-                            <i class="fa-solid fa-lock fa-lg px-2" style="color:black;"></i>
-                            <label for="passwordInput" class="form-label">Enter Password (8-20 characters)</label>
+                        <i class="fa-solid fa-lock fa-lg px-2" style="color:black;"></i>
+                        <label for="exampleInputPassword1" class="form-label">Enter Password</label>
+                        <div class="d-flex" style="border: 1px solid rgba(0, 0, 0, 0.267);border-radius: 5px;">
+                            <input type="password" class="form-control border-0 bg-transparent"
+                                style="border-width: 2px;" id="password">
+                            <button class="btn border-0" id="togglePassword" type="button"><i class="fa-solid fa-eye"
+                                    style="color: #000000;"></i></button>
                         </div>
-                        <input type="password" name="pwd" class="form-control" id="passwordInput" required>
                     </div>
                     <div class="mb-3">
-                        <div>
-                            <i class="fa-solid fa-lock fa-lg px-2" style="color:black;"></i>
-                            <label for="passwordInput" class="form-label">Re-enter Password (8-20 characters)</label>
+                        <i class="fa-solid fa-lock fa-lg px-2" style="color:black;"></i>
+                        <label for="exampleInputPassword1" class="form-label">Re-enter Password</label>
+                        <div class="d-flex" style="border: 1px solid rgba(0, 0, 0, 0.267);border-radius: 5px;">
+                            <input type="password" class="form-control border-0 bg-transparent"
+                                style="border-width: 2px;" id="password1">
+                            <button class="btn border-0" id="togglePassword1" type="button"><i class="fa-solid fa-eye"
+                                    style="color: #000000;"></i></button>
                         </div>
-                        <input type="password" name="pwd" class="form-control" id="passwordInput" required>
                     </div>
                     <div class="d-flex justify-content-center">
                         <button type="submit" class="btn button-bg text-white fw-bold"
@@ -168,9 +174,9 @@
 
             </div>
         </div>
-        
-        <div class="container-fluid bg-footer pt-4" style="background-color: #003333;">
-            <div class="row">
+
+        <div class="container-fluid m-0" style="background-color: #003333;">
+            <div class="row m-0">
                 <div class="col-lg-4 d-flex justify-content-center mb-1">
                     <div class="">
                         <div class="d-flex justify-content-center">
@@ -184,53 +190,57 @@
                         <div class="bg-light rounded-4 d-flex text-center justify-content-center pt-2 pb-2">
                             <i class="fa-solid fa-phone-volume fa-lg px-2" style="color: #006666;"></i>
                             <span class="fw-bolder px-1" style="color: #006666;">Call us</span>
-                            <span class="fw-bolder text-black" style="color:black;">8310813588</span>
+                            <span class="fw-bolder text-black" style="color: #ffffff;">8310813588</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 footer-ele-border rounded-5">
                     <div class="d-flex justify-content-center pt-4">
-                        <i class="fa-solid fa-stopwatch fa-xl" style="color:black;"></i>
+                        <i class="fa-solid fa-stopwatch fa-xl" style="color: #ffffff;"></i>
                     </div>
                     <div>
                         <p class="text-center text-light">8:00AM-9:00PM <br> Sunday Working (9:00AM-7:00PM)
                         </p>
                     </div>
                     <div class="d-flex justify-content-center pt-4">
-                        <i class="fa-solid fa-location-dot fa-xl" style="color:black;"></i>
+                        <i class="fa-solid fa-location-dot fa-xl" style="color: #ffffff;"></i>
                     </div>
                     <div>
                         <p class="text-center text-light">Shobavana campus <br> Moodbidri Mangalore- 574227
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-5 row">
+                <div class="col-lg-5 d-flex justify-content-around">
 
                     <div class="col-lg-6 text-center text-light">
-                        <h5 href="home.html" class="fw-bold text-light">Home</h5>
-                        <p>About </p>
-                        <p>Service</p>
-                        <p>Pricing</p>
-                        <p>Contact</p>
+                        <h5 class="fw-bold txt-color1 mb-0 mt-2">Home</h5>
+                        <div class="d-flex flex-column">
+                            <a href="about.html" class="p py-3 text-decoration-none txt-color1 opacity-75">About</a>
+                            <a href="service.html" class="p py-3 text-decoration-none txt-color1 opacity-75">Service</a>
+                            <a href="pricing.html" class="p py-3 text-decoration-none txt-color1 opacity-75">Pricing</a>
+                            <a href="contact.html" class="p py-3 text-decoration-none txt-color1 opacity-75">Contact</a>
+                        </div>
+
                     </div>
                     <div class="col-lg-6 d-flex justify-content-center justify-content-lg-start text-light">
                         <div class="text-start">
-                            <h5 class="fw-bold text-lg-start text-center">Services</h5>
-                            <div class="d-flex justify-content-between">Free pick up img<img
-                                    src="assets/free_pick_up.png" class="icon-container-img"
-                                    style="width: 32px; height: 32px;" alt=""></div>
-                            <div class="d-flex justify-content-between">
+                            <h5 class="fw-bold text-start txt-color1 mb-lg-3 mt-2">Services</h5>
+
+                            <a class="d-flex justify-content-between text-decoration-none opacity-75 txt-color1 pb-4">Free
+                                pick up img<img src="assets/free_pick_up.png" class="icon-container-img"
+                                    style="width: 32px; height: 32px;" alt=""></a>
+                            <a class="d-flex justify-content-between text-decoration-none opacity-75 txt-color1 pb-4">
                                 <span>Wash and dry</span><img src="assets/wash_and_dry.png" class="icon-container-img"
                                     style="width: 32px; height: 32px;" alt="">
-                            </div>
-                            <div class="d-flex justify-content-between">
+                            </a>
+                            <a class="d-flex justify-content-between text-decoration-none opacity-75 txt-color1 pb-4">
                                 <span>Fold and iron</span><img src="assets/fold_and_iron.png" class="icon-container-img"
                                     style="width: 32px; height: 32px;" alt="">
-                            </div>
-                            <div class="d-flex justify-content-between">
+                            </a>
+                            <a class="d-flex justify-content-between text-decoration-none opacity-75 txt-color1 pb-4">
                                 <span>Free delivery</span><img src="assets/free_delivery.png" class="icon-container-img"
                                     style="width: 32px; height: 32px;" alt="">
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -249,6 +259,43 @@
 
         window.addEventListener('resize', adjustLogoBackground);
         window.addEventListener('load', adjustLogoBackground);
+
+
+
+        let passwordField = document.getElementById('password');
+        let togglePassword = document.getElementById('togglePassword');
+
+        togglePassword.addEventListener('click', function () {
+            // Toggle the type attribute
+            let type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordField.setAttribute('type', type);
+
+            let icon = this.querySelector('i');
+            if (type === 'password') {
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            } else {
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            }
+        });
+        let passwordField1 = document.getElementById('password1');
+        let togglePassword1 = document.getElementById('togglePassword1');
+
+        togglePassword1.addEventListener('click', function () {
+            // Toggle the type attribute
+            let type1 = passwordField1.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordField1.setAttribute('type', type1);
+
+            let icon = this.querySelector('i');
+            if (type1 === 'password') {
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            } else {
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            }
+        });
     </script>
 </body>
 <script src="https://kit.fontawesome.com/dedeab9b5a.js" crossorigin="anonymous"></script>
