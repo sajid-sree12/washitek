@@ -129,9 +129,7 @@ body {
 .elevate-button {
     background-color: white;
     border: none;
-
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
 }
 
 @media(max-width:576px) {
