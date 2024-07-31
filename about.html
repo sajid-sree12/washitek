@@ -11,9 +11,47 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+        <style>
+            .banner {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                height: 400px; /* Adjust the height as needed */
+                overflow: hidden;
+                z-index: -2; /* Ensure it stays above other content */
+            }
+    
+            .banner img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Ensures the image covers the entire div */
+            }
+    
+            .background-shape {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 28vh;
+                background: #006666;
+                clip-path: polygon(0 45%, 100% 0, 100% 100%, 0 100%);
+                z-index: -1; /* Ensure it stays behind other content */
+            }
+    
+            @media (max-width: 768px) {
+                .background-shape {
+                    height: 50vh; /* Adjust height for smaller screens */
+                    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+                }
+            }
+        </style>
 </head>
 
 <body>
+    <div class="banner">
+        <img src="assets/background2.png" alt="Banner Image">
+    </div>
+    <div class="background-shape"></div>
     <div class="container-fluid p-0 m-0" style="background-color: transparent;">
         <div class="row m-0">
             <div class="col-lg-9">
@@ -73,44 +111,55 @@
                 <div class="col-lg-3">
                     <div class="outer-container">
                         <div class="bg-transparent caro-box">
-                            <div id="carouselExampleAutoplaying" class="carousel  carousel-dark slide pb-3 bg-transparent"
-                                data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active bg-white rounded-5">
-                                        <div class="container col-lg-12 p-1">
-                                            <img style="object-fit: cover; border-radius: 20px;"
-                                                src="assets/Fold & iron png.png"
-                                                class="img-fluid ounded-5 d-block w-100" alt="...">
-                                            <p class="text-center pt-3">Fold & Iron</p>
+                            <div id="carouselExampleAutoplaying"
+                                            class="carousel  carousel-dark slide pb-3 bg-transparent"
+                                            data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active bg-white rounded-5">
+                                                    <div class="container col-lg-12 p-1">
+                                                        <img style="object-fit: cover; border-radius: 20px;"
+                                                            src="assets/Free_Pick_UP3.jpg"
+                                                            class="img-fluid ounded-5 d-block w-100" alt="...">
+                                                        <p class="text-center pt-3">Free Pick up</p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item bg-white rounded-5">
+                                                    <div class="container col-lg-12 p-1">
+                                                        <img style="object-fit: cover; border-radius: 20px;"
+                                                            src="assets/fold_and_iron_corousel.png"
+                                                            class="img-fluid ounded-5 d-block w-100" alt="...">
+                                                        <p class="text-center pt-3">Fold & Iron</p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item bg-white rounded-5">
+                                                    <div class="container col-lg-12 p-1">
+                                                        <img src="assets/wash and dry png.png"
+                                                            class="img-fluid rounded-5 d-block w-100" alt="..."
+                                                            alt="...">
+                                                        <p class="text-center pt-3">Wash and Dry</p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item bg-white rounded-5">
+                                                    <div class="container col-lg-12 p-1">
+                                                        <img height="400"
+                                                            style="object-fit:contain;border-radius: 20px;"
+                                                            src="assets/Free Delivery png.png"
+                                                            class="img-fluid rounded-5 d-block w-100" alt="...">
+                                                        <p class="text-center pt-3">Free Delivery</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
                                         </div>
-                                    </div>
-                                    <div class="carousel-item bg-white rounded-5">
-                                        <div class="container col-lg-12 p-1">
-                                            <img src="assets/wash and dry png.png"
-                                                class="img-fluid rounded-5 d-block w-100" alt="..." alt="...">
-                                            <p class="text-center pt-3">Wash and Dry</p>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item bg-white rounded-5">
-                                        <div class="container col-lg-12 p-1">
-                                            <img height="400" style="object-fit:contain;border-radius: 20px;"
-                                                src="assets/Free Delivery png.png"
-                                                class="img-fluid rounded-5 d-block w-100" alt="...">
-                                            <p class="text-center pt-3">Free Delivery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button"
-                                    data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button"
-                                    data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
 
                         </div>
                     </div>

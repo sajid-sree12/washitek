@@ -11,9 +11,47 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+        <style>
+            .banner {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                height: 400px; /* Adjust the height as needed */
+                overflow: hidden;
+                z-index: -2; /* Ensure it stays above other content */
+            }
+    
+            .banner img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Ensures the image covers the entire div */
+            }
+    
+            .background-shape {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 28vh;
+                background: #006666;
+                clip-path: polygon(0 45%, 100% 0, 100% 100%, 0 100%);
+                z-index: -1; /* Ensure it stays behind other content */
+            }
+    
+            @media (max-width: 768px) {
+                .background-shape {
+                    height: 50vh; /* Adjust height for smaller screens */
+                    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+                }
+            }
+        </style>
 </head>
 
 <body>
+    <div class="banner">
+        <img src="assets/background2.png" alt="Banner Image">
+    </div>
+    <div class="background-shape"></div>
     <div class="container-fluid p-0 m-0" style="background-color: transparent;">
         <div class="row m-0">
             <div class="col-lg-9">
@@ -74,13 +112,13 @@
                                         <div class="col-lg-1"></div>
                                         <div class="col-lg-10">
                                             <div class="row m-0">
-                                                <div class="mb-3 col-lg-6">
+                                                <div class="mb-3 ps-0 pe-2 col-lg-6">
 
                                                     <input type="text" id="first-name" name="first-name"
                                                         placeholder="First Name"
                                                         style="outline: none; border-radius: 0%; border-top: none;border-left: none;border-right: none;border-bottom-width: 2px;width: 100%;">
                                                 </div>
-                                                <div class="mb-3 col-lg-6  ">
+                                                <div class="mb-3 px-0 col-lg-6  ">
 
                                                     <input type="text" id="lat-name" name="last-name"
                                                         placeholder="Last Name"

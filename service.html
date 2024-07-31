@@ -13,46 +13,105 @@
         crossorigin="anonymous"></script>
     <style>
         body {
-    background: url("assets/bg-service.png");
+            /*background: url("assets/bg-service.png");*/
 
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-}
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .banner {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 400px;
+            /* Adjust the height as needed */
+            overflow: hidden;
+            z-index: -2;
+            /* Ensure it stays above other content */
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Ensures the image covers the entire div */
+        }
+
+        .background-shape {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 28vh;
+            background: #006666;
+            clip-path: polygon(0 45%, 100% 0, 100% 100%, 0 100%);
+            z-index: -1;
+            /* Ensure it stays behind other content */
+        }
+
+        @media (max-width: 768px) {
+            .background-shape {
+                height: 50vh;
+                /* Adjust height for smaller screens */
+                clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+            }
+        }
     </style>
 </head>
+
 <body>
+    <div class="banner">
+        <img src="assets/new-bg-service.png" alt="Banner Image">
+    </div>
+    <div class="background-shape"></div>
     <div class="container-fluid p-0 m-0" style="background-color: transparent;">
         <div class="row m-0 elevate-container">
-            <div class="col-3 col-lg-1 logo-bg bg-transparent me-5">
-                <a href="index.html"><img src="assets/logo_w.png" height="100" alt=""></a>
-            </div>
-            <div class="col-7 d-block d-lg-none col-lg-0 px-1 py-4">
-                <div class="d-flex justify-content-center">
-                    <div>
-                        <a href="login.html" class="btn elevate-button text-white btn-bg mx-2 rounded-pill "
-                            style="background: #006666;">Login</a>
+            <div class="col-lg-9">
+                <div class="row m-0" style="background-color: transparent;">
+                    <div class="col-3 col-lg-1 logo-bg bg-transparent me-5">
+                        <a href="index.html"><img src="assets/logo_w.png" height="100" alt=""></a>
                     </div>
-                    <div>
-                        <a href="signup.html" class="btn btn-light mx-2 rounded-pill">Sign up</a>
+                    <div class="col-7 d-block d-lg-none col-lg-0 px-1 py-4">
+                        <div class="d-flex justify-content-center">
+                            <div>
+                                <a href="login.html" class="btn text-white btn-bg mx-2 rounded-pill "
+                                    style="background: #006666;">Login</a>
+                            </div>
+                            <div>
+                                <a href="signup.html" class="btn btn-light mx-2 rounded-pill">Sign up</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 px-1 py-2 menu-bar bg-white ">
+                        <div class="d-flex justify-content-center">
+                            <a href="index.html"
+                                class="a bg-transparent px-2 text-decoration-none py-2 nav-item txt-clr">Home</a>
+                            <a href="about.html"
+                                class="a bg-transparent px-2 text-decoration-none py-2 nav-item txt-clr">About</a>
+                            <a href="service.html"
+                                class="a bg-transparent px-2 text-decoration-none py-2 nav-item txt-clr n-active">Services</a>
+                            <a href="pricing.html"
+                                class="a bg-transparent px-2 text-decoration-none py-2 nav-item txt-clr">Pricing</a>
+                            <a href="contact.html"
+                                class="a bg-transparent px-2 text-decoration-none py-2 nav-item txt-clr">Contact</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="d-none d-lg-block col-lg-4 px-1 py-4">
+                        <div class="d-flex justify-content-center">
+                            <a href="login.html" class="btn btn-light text-dark  px-4 mx-2 rounded-pill "
+                                style="background: #ffffff;">Login</a>
+                            <div>
+                                <a href="signup.html" class="btn px-4 rounded-pill text-white"
+                                    style="background: #006666;">Sign up</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5">
-            </div>
-            <div class="col-lg-1"></div>
-            <div class="d-none d-lg-block col-lg-4 px-1 py-4">
-                <div class="d-flex justify-content-center">
-                    <a href="login.html" class="btn elevate-button btn-light fw-bold  px-4 mx-2 rounded-pill "
-                        style="background: #ffffff; color: #006666;">Login</a>
-                    <div>
-                        <a href="signup.html" class="btn px-4 rounded-pill text-white" style="background: #006666;box-shadow: 0 4px 8px rgba(22, 204, 64, 0.2);">Sign
-                            up</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-1"></div>
+            <div class="col-lg-3"></div>
         </div>
         <div class="row m-0 mt-5 text-center">
             <h1>Our Services</h1>
@@ -66,9 +125,11 @@
                             <img src="assets/free_pick_up.png" class="me-3" style="width: 8rem; height: 8rem;" alt="">
                             <p>Free pick up</p>
                             <div class=" px-1 py-2 rounded-2 text-light" style="background-color: #006666;">
-                                <a href="Free_pick_up.html" class="text-decoration-none text-light"><div class=" text-start d-flex justify-content-center align-items-center">&nbsp;
-                                    <span>Read More</span>&nbsp;<i class="fa-solid fa-arrow-right"></i>
-                                </div></a>
+                                <a href="Free_pick_up.html" class="text-decoration-none text-light">
+                                    <div class=" text-start d-flex justify-content-center align-items-center">&nbsp;
+                                        <span>Read More</span>&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -78,9 +139,11 @@
                             <img src="assets/wash_and_dry.png" style="width: 8rem; height: 8rem; alt=">
                             <p>Wash and dry</p>
                             <div class=" px-1 py-2 rounded-2 text-light" style="background-color: #006666;">
-                                <a href="Wash_and_Dry.html" class="text-decoration-none text-light"><div class=" text-start d-flex justify-content-center align-items-center">&nbsp;
-                                    <span>Read More</span>&nbsp;<i class="fa-solid fa-arrow-right"></i>
-                                </div></a>
+                                <a href="Wash_and_Dry.html" class="text-decoration-none text-light">
+                                    <div class=" text-start d-flex justify-content-center align-items-center">&nbsp;
+                                        <span>Read More</span>&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -90,99 +153,103 @@
                             <img src="assets/fold_and_iron.png" style="width: 8rem; height: 8rem; alt="">
                             <p>Fold and Iron</p>
                             <div class=" px-1 py-2 rounded-2 text-light" style="background-color: #006666;">
-                                <a href="Fold_and_Iron.html" class="text-decoration-none text-light"><div class=" text-start d-flex justify-content-center align-items-center">&nbsp;
+                            <a href="Fold_and_Iron.html" class="text-decoration-none text-light">
+                                <div class=" text-start d-flex justify-content-center align-items-center">&nbsp;
                                     <span>Read More</span>&nbsp;<i class="fa-solid fa-arrow-right"></i>
-                                </div></a>
-                            </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                    <div class="card d-flex justify-content-center card-margin m-3 p-0 pt-2"
-                        style="width: 15rem; border-radius: 20px;">
-                        <div class="card-body px-2 pb-2 text-center">
-                            <img src="assets/free_delivery.png" style="width: 8rem; height: 8rem;" alt="">
-                            <p>Free Delivery</p>
-                            <div class=" px-1 py-2 rounded-2 text-light" style="background-color: #006666;">
-                                <a href="Free_Delivery.html" class="text-decoration-none text-light"><div class=" text-start d-flex justify-content-center align-items-center">&nbsp;
-                                    <span>Read More</span>&nbsp;<i class="fa-solid fa-arrow-right"></i>
-                                </div></a>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
+                <div class="card d-flex justify-content-center card-margin m-3 p-0 pt-2"
+                    style="width: 15rem; border-radius: 20px;">
+                    <div class="card-body px-2 pb-2 text-center">
+                        <img src="assets/free_delivery.png" style="width: 8rem; height: 8rem;" alt="">
+                        <p>Free Delivery</p>
+                        <div class=" px-1 py-2 rounded-2 text-light" style="background-color: #006666;">
+                            <a href="Free_Delivery.html" class="text-decoration-none text-light">
+                                <div class=" text-start d-flex justify-content-center align-items-center">&nbsp;
+                                    <span>Read More</span>&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-        <div class="container-fluid m-0" style="background-color: #003333;">
-            <div class="row m-0">
-                <div class="col-lg-4 d-flex justify-content-center mb-1">
-                    <div class="">
-                        <div class="d-flex justify-content-center">
-                            <img src="assets/logo_w.png" height="100" alt="" srcset="">
-                        </div>
-                        <p class="text-white">Make the mess, we clean the stress</p>
-                        <div class="d-flex justify-content-center mb-2">
-                            <img class="px-2" src="assets/social.png" height="30" alt="" srcset="">
-                            <img class="px-2" src="assets/instagram.png" height="30" alt="" srcset="">
-                        </div>
-                        <div class="bg-light rounded-4 d-flex text-center justify-content-center pt-2 pb-2">
-                            <i class="fa-solid fa-phone-volume fa-lg px-2" style="color: #006666;"></i>
-                            <span class="fw-bolder px-1" style="color: #006666;">Call us</span>
-                            <span class="fw-bolder text-black" style="color: #ffffff;">8310813588</span>
-                        </div>
+    </div>
+    <div class="container-fluid m-0" style="background-color: #003333;">
+        <div class="row m-0">
+            <div class="col-lg-4 d-flex justify-content-center mb-1">
+                <div class="">
+                    <div class="d-flex justify-content-center">
+                        <img src="assets/logo_w.png" height="100" alt="" srcset="">
                     </div>
-                </div>
-                <div class="col-lg-3 footer-ele-border rounded-5">
-                    <div class="d-flex justify-content-center pt-4">
-                        <i class="fa-solid fa-stopwatch fa-xl" style="color: #ffffff;"></i>
+                    <p class="text-white">Make the mess, we clean the stress</p>
+                    <div class="d-flex justify-content-center mb-2">
+                        <img class="px-2" src="assets/social.png" height="30" alt="" srcset="">
+                        <img class="px-2" src="assets/instagram.png" height="30" alt="" srcset="">
                     </div>
-                    <div>
-                        <p class="text-center text-light">8:00AM-9:00PM <br> Sunday Working (9:00AM-7:00PM)
-                        </p>
-                    </div>
-                    <div class="d-flex justify-content-center pt-4">
-                        <i class="fa-solid fa-location-dot fa-xl" style="color: #ffffff;"></i>
-                    </div>
-                    <div>
-                        <p class="text-center text-light">Shobavana campus <br> Moodbidri Mangalore- 574227
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-5 d-flex justify-content-around">
-
-                    <div class="col-lg-6 text-center text-light">
-                        <h5 class="fw-bold txt-color1 mb-0 mt-2">Home</h5>
-                        <div class="d-flex flex-column">
-                            <a href="about.html" class="p py-3 text-decoration-none txt-color1 opacity-75">About</a>
-                            <a href="service.html" class="p py-3 text-decoration-none txt-color1 opacity-75">Service</a>
-                            <a href="pricing.html" class="p py-3 text-decoration-none txt-color1 opacity-75">Pricing</a>
-                            <a href="contact.html" class="p py-3 text-decoration-none txt-color1 opacity-75">Contact</a>
-                        </div>
-
-                    </div>
-                    <div class="col-lg-6 d-flex justify-content-center justify-content-lg-start text-light">
-                        <div class="text-start">
-                            <h5 class="fw-bold text-start txt-color1 mb-lg-3 mt-2">Services</h5>
-
-                            <a class="d-flex justify-content-between text-decoration-none opacity-75 txt-color1 pb-4">Free
-                                pick up img<img src="assets/free_pick_up.png" class="icon-container-img"
-                                    style="width: 32px; height: 32px;" alt=""></a>
-                            <a class="d-flex justify-content-between text-decoration-none opacity-75 txt-color1 pb-4">
-                                <span>Wash and dry</span><img src="assets/wash_and_dry.png" class="icon-container-img"
-                                    style="width: 32px; height: 32px;" alt="">
-                            </a>
-                            <a class="d-flex justify-content-between text-decoration-none opacity-75 txt-color1 pb-4">
-                                <span>Fold and iron</span><img src="assets/fold_and_iron.png" class="icon-container-img"
-                                    style="width: 32px; height: 32px;" alt="">
-                            </a>
-                            <a class="d-flex justify-content-between text-decoration-none opacity-75 txt-color1 pb-4">
-                                <span>Free delivery</span><img src="assets/free_delivery.png" class="icon-container-img"
-                                    style="width: 32px; height: 32px;" alt="">
-                            </a>
-                        </div>
+                    <div class="bg-light rounded-4 d-flex text-center justify-content-center pt-2 pb-2">
+                        <i class="fa-solid fa-phone-volume fa-lg px-2" style="color: #006666;"></i>
+                        <span class="fw-bolder px-1" style="color: #006666;">Call us</span>
+                        <span class="fw-bolder text-black" style="color: #ffffff;">8310813588</span>
                     </div>
                 </div>
             </div>
+            <div class="col-lg-3 footer-ele-border rounded-5">
+                <div class="d-flex justify-content-center pt-4">
+                    <i class="fa-solid fa-stopwatch fa-xl" style="color: #ffffff;"></i>
+                </div>
+                <div>
+                    <p class="text-center text-light">8:00AM-9:00PM <br> Sunday Working (9:00AM-7:00PM)
+                    </p>
+                </div>
+                <div class="d-flex justify-content-center pt-4">
+                    <i class="fa-solid fa-location-dot fa-xl" style="color: #ffffff;"></i>
+                </div>
+                <div>
+                    <p class="text-center text-light">Shobavana campus <br> Moodbidri Mangalore- 574227
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-5 d-flex justify-content-around">
+
+                <div class="col-lg-6 text-center text-light">
+                    <h5 class="fw-bold txt-color1 mb-0 mt-2">Home</h5>
+                    <div class="d-flex flex-column">
+                        <a href="about.html" class="p py-3 text-decoration-none txt-color1 opacity-75">About</a>
+                        <a href="service.html" class="p py-3 text-decoration-none txt-color1 opacity-75">Service</a>
+                        <a href="pricing.html" class="p py-3 text-decoration-none txt-color1 opacity-75">Pricing</a>
+                        <a href="contact.html" class="p py-3 text-decoration-none txt-color1 opacity-75">Contact</a>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 d-flex justify-content-center justify-content-lg-start text-light">
+                    <div class="text-start">
+                        <h5 class="fw-bold text-start txt-color1 mb-lg-3 mt-2">Services</h5>
+
+                        <a class="d-flex justify-content-between text-decoration-none opacity-75 txt-color1 pb-4">Free
+                            pick up img<img src="assets/free_pick_up.png" class="icon-container-img"
+                                style="width: 32px; height: 32px;" alt=""></a>
+                        <a class="d-flex justify-content-between text-decoration-none opacity-75 txt-color1 pb-4">
+                            <span>Wash and dry</span><img src="assets/wash_and_dry.png" class="icon-container-img"
+                                style="width: 32px; height: 32px;" alt="">
+                        </a>
+                        <a class="d-flex justify-content-between text-decoration-none opacity-75 txt-color1 pb-4">
+                            <span>Fold and iron</span><img src="assets/fold_and_iron.png" class="icon-container-img"
+                                style="width: 32px; height: 32px;" alt="">
+                        </a>
+                        <a class="d-flex justify-content-between text-decoration-none opacity-75 txt-color1 pb-4">
+                            <span>Free delivery</span><img src="assets/free_delivery.png" class="icon-container-img"
+                                style="width: 32px; height: 32px;" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
     </div>
     <script>
         function adjustLogoBackground() {
